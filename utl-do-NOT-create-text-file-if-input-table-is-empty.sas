@@ -1,4 +1,6 @@
 
+%let pgm=utl-do-NOT-create-text-file-if-input-table-is-empty;
+
 Do NOT create txt file if input table is empty
 
         Two Test cases
@@ -7,7 +9,7 @@ Do NOT create txt file if input table is empty
 
 Not as simple as you might think.
 
-GitHub
+github
 https://github.com/rogerjdeangelis/utl-do-NOT-create-text-file-if-input-table-is-empty
 
 Related to
@@ -71,11 +73,9 @@ DATA _NULL_;
     /* nobs is available at datastep compilation time */
 
     /* If there are observations, proceed*/
-    if nobs>0 then fileloc="d:/txt/want.txt";
+    if nobs>0 then stop;
 
-    /*Otherwise, quit here */
-    else stop;
-
+    fileloc="d:/txt/want.txt";
     SET Work.EMPTY nobs=nobs;
 
     file x filevar=fileloc; /* file loc only exists if nobs > 0 */
@@ -132,8 +132,6 @@ DATA _NULL_;
     /* If there are observations, proceed*/
     if nobs>0 then fileloc="d:/txt/want.txt";
 
-    /*Otherwise, quit here */
-    else stop;
 
     SET Work.HAS_DATA nobs=nobs;
 
