@@ -7,6 +7,9 @@ Do NOT create txt file if input table is empty
 
 Not as simple as you might think.
 
+GitHub
+https://github.com/rogerjdeangelis/utl-do-NOT-create-text-file-if-input-table-is-empty
+
 Related to
 https://tinyurl.com/52w2rrf2
 https://communities.sas.com/t5/SAS-Programming/Conditionally-create-a-file-in-a-data-statement/m-p/724490
