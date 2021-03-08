@@ -8,8 +8,8 @@ Do NOT create txt file if input table is empty
                 b. Input table has data
 
     Not as simple as you might think.
-    
-    GitHub
+
+    github
     https://github.com/rogerjdeangelis/utl-do-NOT-create-text-file-if-input-table-is-empty
 
     Related to
@@ -73,11 +73,9 @@ Do NOT create txt file if input table is empty
         /* nobs is available at datastep compilation time */
 
         /* If there are observations, proceed*/
-        if nobs>0 then fileloc="d:/txt/want.txt";
+        if nobs>0 then stop;
 
-        /*Otherwise, quit here */
-        else stop;
-
+        fileloc="d:/txt/want.txt";
         SET Work.EMPTY nobs=nobs;
 
         file x filevar=fileloc; /* file loc only exists if nobs > 0 */
@@ -134,8 +132,6 @@ Do NOT create txt file if input table is empty
         /* If there are observations, proceed*/
         if nobs>0 then fileloc="d:/txt/want.txt";
 
-        /*Otherwise, quit here */
-        else stop;
 
         SET Work.HAS_DATA nobs=nobs;
 
