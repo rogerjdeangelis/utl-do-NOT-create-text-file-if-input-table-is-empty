@@ -8,6 +8,9 @@ Do NOT create txt file if input table is empty
                 b. Input table has data
 
     Not as simple as you might think.
+    
+    GitHub
+    https://github.com/rogerjdeangelis/utl-do-NOT-create-text-file-if-input-table-is-empty
 
     Related to
     https://tinyurl.com/52w2rrf2
